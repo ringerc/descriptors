@@ -125,6 +125,7 @@ public class MetadataParser
         metadataDescriptor.setNamespace(metadataConf.getNameSpace());
         metadataDescriptor.setNamespaces(metadataConf.getNamespaces());
         metadataDescriptor.setGenerateClasses(metadataConf.generateClasses);
+        metadataDescriptor.setDefaultFileName(metadataConf.getDefaultFileName());
         metadata.getMetadataDescriptorList().add(metadataDescriptor);
          
          if (metadataConf.getPathToXsd().endsWith(".dtd"))

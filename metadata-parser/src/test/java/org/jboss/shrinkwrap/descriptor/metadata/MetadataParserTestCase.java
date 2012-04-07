@@ -19,6 +19,8 @@ package org.jboss.shrinkwrap.descriptor.metadata;
 
 
 
+import static org.junit.Assert.fail;
+
 import java.util.ArrayList;
 
 import java.util.List;
@@ -36,7 +38,35 @@ import org.junit.Test;
 public class MetadataParserTestCase
 {
 
+	@Test
+	public void testGetMetadata() throws Exception
+	{
+		final MetadataParser parser = new MetadataParser();		
+		final List<MetadataDescriptor> descriptorList = new ArrayList<MetadataDescriptor>();
+		final MetadataDescriptor descriptor = new MetadataDescriptor("TestDescriptor");
+		descriptor.setNamespace("testNS");
+		descriptor.setPackageApi("org.jboss.shrinkwrap.metadata.test.api");
+		descriptor.setPackageImpl("org.jboss.shrinkwrap.metadata.test.impl");
+		descriptorList.add(descriptor);
+		
+		MetadataParserPath path = new MetadataParserPath();
+		
+		parser.parse(path, descriptorList, false);
+//		fail("Not yet implemented");
+	}
+
+	@Test
+	public void testParse() {
+//		fail("Not yet implemented");
+	}
+
+	@Test
+	public void testGenerateCode() {
+//		fail("Not yet implemented");
+	}
+	
     @Test
+    @Ignore
     public void generateTestCase() throws Exception
     {
        

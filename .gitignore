@@ -5,3 +5,6 @@ target
 bin
 metadata-parser-test/src/main/resources/META-INF
 metadata-parser-test/src/test/java
+impl-javaee/src/main/resources/META-INF/services
+impl-jboss/src/main/resources/META-INF/services
+impl-misc/src/main/resources/META-INF/services
